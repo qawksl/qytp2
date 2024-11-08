@@ -83,5 +83,5 @@ class MainWindow(QMainWindow):
         form_window = FormWindow(self, str(self.list_view.selectedIndexes()[0].data()))
         if form_window.exec() == 1:
             db = Database()
-            db.edit_animals(form_window.name_text(), form_window.id)
+            db.edit_animals(form_window.name_text.text(), form_window.id)
             self.update_list_view_animals()
